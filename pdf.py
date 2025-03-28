@@ -88,6 +88,14 @@ def speak_text(text, lang="en"):
         return f"Error generating speech: {str(e)}"
 
 
+
+@app.route("/")
+def home():
+    return "PDF Extraction API is running!"
+
+if __name__ == "__main__":
+    app.run(debug=True)
+
 @app.route("/extract-text", methods=["POST"])
 def extract_text():
     """API Endpoint to process PDFs and images for text extraction."""
