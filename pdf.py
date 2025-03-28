@@ -90,11 +90,9 @@ def speak_text(text, lang="en"):
 
 
 @app.route("/")
-def home():
-    return "PDF Extraction API is running!"
-
-if __name__ == "__main__":
-    app.run(debug=True)
+def index():
+    """Render the HTML frontend"""
+    return render_template("index.html")
 
 @app.route("/extract-text", methods=["POST"])
 def extract_text():
