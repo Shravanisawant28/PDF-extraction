@@ -7,3 +7,4 @@ gtts
 pygame
 pytesseract
 pdf2image
+gunicorn
